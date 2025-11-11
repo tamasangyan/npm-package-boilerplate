@@ -22,7 +22,11 @@
 		"url": "git+https://github.com/tamasangyan/npm-package-boilerplate.git"
 	},
 	"license": "MIT",
-	"author": "Tamás Ángyán",
+	"author": {
+		"name": "Tamas Angyan",
+		"email": "tamas@levine.hu",
+		"url": "https://github.com/tamasangyan"
+	},
 	"main": "index.js",
 	"scripts": {
 		"build": "pnpm clean && tsup",
