@@ -31,7 +31,7 @@
 		"prepare": "pnpm build",
 		"clean": "rimraf dist",
 		"typecheck": "tsc --noEmit",
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "pnpm build",
 		"format": "pnpm exec biome format --write",
 		"lint": "pnpm exec biome lint --write",
 		"check": "pnpm exec biome check --write"
