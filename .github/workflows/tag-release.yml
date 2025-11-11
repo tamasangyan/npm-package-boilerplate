@@ -1,0 +1,38 @@
+name: Tag release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tag:
+    if: contains(toJson(github.event.commits), 'Version Packages')
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Read version
+        id: version
+        run: echo "version=$(node -p \"require('./package.json').version\")" >> "$GITHUB_OUTPUT"
+
+      - name: Create v-prefixed tag
+        env:
+          TAG: v${{ steps.version.outputs.version }}
+        run: |
+          git fetch --tags
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists, skipping."
+            exit 0
+          fi
+
+          git tag "$TAG"
+          git push origin "$TAG"
