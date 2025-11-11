@@ -4,5 +4,5 @@ function myFunction(param) {
 }
 
 export { myFunction };
-//# sourceMappingURL=index.js.map
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.mjs.map
+//# sourceMappingURL=index.mjs.map

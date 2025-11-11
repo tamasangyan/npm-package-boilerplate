@@ -8,5 +8,21 @@ export default defineConfig({
 	format: ["cjs", "esm"],
 	experimentalDts: true,
 	treeshake: true,
+	outExtension({ format }) {
+		switch (format) {
+			case "cjs":
+				return {
+					js: `.cjs`,
+					dts: `.d.ts`,
+				};
+			case "esm":
+				return {
+					js: `.mjs`,
+					dts: `.d.ts`,
+				};
+			default:
+				throw new Error(`Unknown format: ${format}`);
+		}
+	},
 	target: "node16",
 });

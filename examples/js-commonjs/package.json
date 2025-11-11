@@ -1,0 +1,12 @@
+{
+	"name": "example-js-commonjs",
+	"version": "0.0.0",
+	"private": true,
+	"type": "commonjs",
+	"scripts": {
+		"start": "node ./index.cjs"
+	},
+	"dependencies": {
+		"npm-package-boilerplate": "workspace:*"
+	}
+}

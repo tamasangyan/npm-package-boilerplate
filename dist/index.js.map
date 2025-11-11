@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/index.ts"],"names":[],"mappings":";AAIO,SAAS,WAAW,KAAA,EAA6B;AACvD,EAAA,OAAO,CAAA,aAAA,EAAgB,MAAM,EAAE,CAAA,CAAA;AAChC","file":"index.js","sourcesContent":["export type MyCustomType = {\n\tid: number;\n};\n\nexport function myFunction(param: MyCustomType): string {\n\treturn `ID might be: ${param.id}`;\n}\n"]}
