@@ -31,7 +31,7 @@
 	"scripts": {
 		"build": "pnpm clean && tsup",
 		"dev": "tsup --watch",
-		"preinstall": "lefthook install",
+		"preinstall": "lefthook install && npx -y only-allow pnpm",
 		"prepare": "pnpm build",
 		"clean": "rimraf dist",
 		"typecheck": "tsc --noEmit",
@@ -60,7 +60,6 @@
 		"LICENSE",
 		"package.json"
 	],
-	"packageManager": "^pnpm@10.13.1",
 	"dependencies": {
 		"lefthook": "^2.0.9",
 		"rimraf": "^5.0.10",
