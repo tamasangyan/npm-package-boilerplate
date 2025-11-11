@@ -31,6 +31,7 @@
 		"prepare": "pnpm build",
 		"clean": "rimraf dist",
 		"typecheck": "tsc --noEmit",
+		"test": "vitest",
 		"prepublishOnly": "pnpm build",
 		"format": "pnpm exec biome format --write",
 		"lint": "pnpm exec biome lint --write",
@@ -61,6 +62,7 @@
 		"@biomejs/biome": "2.3.8",
 		"@changesets/cli": "^2.29.8",
 		"@microsoft/api-extractor": "^7.55.2",
-		"tsup": "^8.5.1"
+		"tsup": "^8.5.1",
+		"vitest": "^4.0.15"
 	}
 }
