@@ -53,6 +53,7 @@
 		"LICENSE",
 		"package.json"
 	],
+	"packageManager": "^pnpm@10.13.1",
 	"dependencies": {
 		"lefthook": "^2.0.9",
 		"rimraf": "^5.0.10",
