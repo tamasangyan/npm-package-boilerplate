@@ -44,7 +44,10 @@
 		"check": "pnpm exec biome check",
 		"check:write": "pnpm exec biome check --write",
 		"changeset": "pnpm exec changeset",
-		"changeset:version": "pnpm exec changeset version"
+		"changeset:version": "pnpm exec changeset version",
+		"docs:dev": "vitepress dev docs",
+		"docs:build": "vitepress build docs",
+		"docs:preview": "vitepress preview docs"
 	},
 	"exports": {
 		".": {
@@ -70,6 +73,7 @@
 		"@changesets/cli": "^2.29.8",
 		"@microsoft/api-extractor": "^7.55.2",
 		"tsup": "^8.5.1",
+		"vitepress": "2.0.0-alpha.15",
 		"vitest": "^4.0.15"
 	}
 }

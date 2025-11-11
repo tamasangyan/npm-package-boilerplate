@@ -4,3 +4,5 @@ node_modules
 temp/
 .tsup
 dist
+docs/.vitepress/dist
+docs/.vitepress/cache
