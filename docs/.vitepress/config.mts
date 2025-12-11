@@ -28,5 +28,5 @@ export default defineConfig({
 			},
 		],
 	},
-	base: "/repo/",
+	base: "/npm-package-boilerplate/",
 });
